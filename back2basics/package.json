@@ -1,0 +1,35 @@
+{
+  "name": "back2basics",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@headlessui/react": "^2.1.3",
+    "@uploadthing/react": "^6.8.0",
+    "axios": "^1.7.7",
+    "framer-motion": "^11.4.0",
+    "leaflet": "^1.9.4",
+    "leaflet-defaulticon-compatibility": "^0.1.2",
+    "next": "14.2.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-leaflet": "^4.2.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14",
+    "uploadthing": "^6.13.3"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
