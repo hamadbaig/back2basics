@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
@@ -12,8 +13,8 @@ const BlogDetails = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
-    if (id) {
-      const fetchBlog = async () => {
+    const fetchBlog = async () => {
+      if (id) {
         try {
           const response = await fetch(`${apiUrl}/api/blogs/blogsbyId/${id}`);
           if (!response.ok) {
@@ -26,11 +27,13 @@ const BlogDetails = () => {
         } finally {
           setLoading(false);
         }
-      };
+      } else {
+        setLoading(false); // No ID provided
+      }
+    };
 
-      fetchBlog();
-    }
-  }, [id]);
+    fetchBlog();
+  }, [id, apiUrl]);
 
   if (loading) return <div className="text-center py-10">Loading...</div>;
   if (error)
@@ -116,4 +119,12 @@ const BlogDetails = () => {
   );
 };
 
-export default BlogDetails;
+const BlogDetailsWrapper = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogDetails />
+    </Suspense>
+  );
+};
+
+export default BlogDetailsWrapper;

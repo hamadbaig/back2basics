@@ -2,7 +2,7 @@
 
 const QuoteSection = () => {
   return (
-    <section className="flex flex-col items-center justify-center px-6 py-12 bg-[#63BF6D]">
+    <section className="flex flex-col items-center justify-center px-6 py-12 border-t-4 border-b-4 border-white bg-[#63BF6D]">
       <div className="border-4 border-white px-2 py-2  ">
         <div className="border-4 border-white px-4 py-8 lg:px-12 lg:py-16 text-center max-w-4xl">
           <blockquote className="text-white text-xl lg:text-2xl font-medium leading-relaxed">

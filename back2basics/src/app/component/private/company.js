@@ -53,62 +53,76 @@ const company = () => {
   return (
     <>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-16 mb-8">
-        <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
-          ADD Our Partners
+        <h2 className="text-center text-2xl font-bold leading-8 text-gray-900 m-[4rem]">
+          Our Partners
         </h2>
         <div className="mt-10 flex flex-wrap justify-center gap-8">
           <Image
             alt="Transistor"
-            src="/c1.jpeg"
+            src="https://utfs.io/f/P4auCx0rGutTsCjo3EQfSi0MH17qg9vLmBGzyJRZe83ox4nN"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="Reform"
-            src="/c2.png"
+            src="https://utfs.io/f/P4auCx0rGutTYjfUsQnm45rQV91X8yPk3DbZEKHGNMeFjAh7"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="Tuple"
-            src="/c3.webp"
+            src="https://utfs.io/f/P4auCx0rGutTFz5kuipMUAIsLHvcfoVk1iXOryz4RT3G0ajY"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="SavvyCal"
-            src="/c4.png"
+            src="https://utfs.io/f/P4auCx0rGutTWbZEOGlwBgaVYeH4UqN6ujEsLJMXic2tmxzb"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="Statamic"
-            src="/c5.png"
+            src="https://utfs.io/f/P4auCx0rGutTwdUB2byl8z3vcLXqjC1Ufd7OBKYgpnaho02b"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="Statamic"
-            src="/c6.jpeg"
+            src="https://utfs.io/f/P4auCx0rGutTFy8bOvpMUAIsLHvcfoVk1iXOryz4RT3G0ajY"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
           <Image
             alt="SavvyCal"
-            src="/c7.svg"
+            src="https://utfs.io/f/P4auCx0rGutTdJFCZbxXZ1hbrjft5gA9W3QSLPx2qYdiUB80"
+            width={158}
+            height={48}
+            className="max-h-12 object-contain"
+          />
+          <Image
+            alt="SavvyCal"
+            src="https://utfs.io/f/P4auCx0rGutTXrnvVEI2L4ZrkJW0NcwG8qnptSmvbdKEMfOz"
+            width={158}
+            height={48}
+            className="max-h-12 object-contain"
+          />
+          <Image
+            alt="SavvyCal"
+            src="https://utfs.io/f/P4auCx0rGutTc7kVWhGIGtZyHbPrAOpsd3M5BYeai9JcqlX0"
             width={158}
             height={48}
             className="max-h-12 object-contain"
           />
         </div>
       </div>
-      <footer className="mx-auto mt-20 max-w-7xl overflow-hidden px-6 pb-20  lg:px-8">
+      {/* <footer className="mx-auto mt-20 max-w-7xl overflow-hidden px-6 pb-20  lg:px-8">
         <nav
           aria-label="Footer"
           className="mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -130,10 +144,8 @@ const company = () => {
 
           <p>+918527862446</p>
         </div>
-        {/* <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2024 Your Company, Inc. All rights reserved.
-        </p> */}
-      </footer>
+       
+      </footer> */}
     </>
   );
 };

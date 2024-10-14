@@ -1,25 +1,15 @@
 "use client";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup";
 
-import { useState } from "react";
-import Image from "next/image";
-import BlogList from "./BlogList";
-import Company from "./company";
-// import { Dialog, DialogPanel } from "@headlessui/react";
-// import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Resources", href: "#" },
-  { name: "Company", href: "#" },
-];
 const stats = [
-  { label: "Adregators Upliftment", value: "100+" },
-  { label: "Monthly Recycling Capacity", value: "7500Mt" },
-  { label: "Monthly Battery Sourcing Network", value: "600Mt+" },
-  { label: "Battery OEM tieups (in process)", value: "5" },
-  { label: "Bulk Consumer Tieups (in process)", value: "5+" },
-  { label: "Pan India Collection Centers", value: "30+" },
+  { label: "Aggregators Upliftment", value: 100, suffix: "+" },
+  { label: "Monthly Recycling Capacity", value: 7500, suffix: "Mt" },
+  { label: "Monthly Battery Sourcing Network", value: 600, suffix: "Mt+" },
+  { label: "Battery OEM tieups (in process)", value: 5 },
+  { label: "Bulk Consumer Tieups (in process)", value: 5, suffix: "+" },
+  { label: "Pan India Collection Centers", value: 30, suffix: "+" },
 ];
 const values = [
   {
@@ -48,7 +38,8 @@ const team = [
   {
     name: "Vipin Upadhyay",
     role: "Director, Back2Basics",
-    imageUrl: "/vipin.jpeg",
+    imageUrl:
+      "https://utfs.io/f/P4auCx0rGutTMHGph9RwGc1hkibELAp3nKoCy8atv60j2F4e",
     linkedinUrl: "https://www.linkedin.com/in/vipin-upadhyay-60451b55/",
   },
   {
@@ -56,24 +47,6 @@ const team = [
     role: "Chief Technical Officer (CTO)",
     imageUrl: "human1.png",
     linkedinUrl: "https://www.linkedin.com/in/partha-pratim-mondal-1a907a1a7/",
-  },
-  {
-    name: "Mr. Abid Naseem",
-    role: "Plant's head",
-    imageUrl: "human1.png",
-    linkedinUrl: "https://www.linkedin.com/in/abid-naseem",
-  },
-  {
-    name: "Mr. Inam Ul Hoqu",
-    role: "Research Programmed Manager",
-    imageUrl: "human1.png",
-    linkedinUrl: "https://www.linkedin.com/in/inam-ul-hoqu",
-  },
-  {
-    name: "Mr. Upendra Singh",
-    role: "Business Development Manager",
-    imageUrl: "human1.png",
-    linkedinUrl: "https://www.linkedin.com/in/upendra-singh",
   },
 ];
 
@@ -151,6 +124,7 @@ const footerNavigation = {
 };
 
 export default function Example() {
+  const { ref, inView } = useInView({ triggerOnce: true });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -158,47 +132,6 @@ export default function Example() {
       <main className="isolate">
         {/* Hero section */}
         <div className="relative isolate -z-10">
-          <svg
-            aria-hidden="true"
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-          >
-            <defs>
-              <pattern
-                x="50%"
-                y={-1}
-                id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-                width={200}
-                height={200}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-              <path
-                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-            />
-          </svg>
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
-          >
-            <div
-              style={{
-                clipPath:
-                  "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
-              }}
-              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-            />
-          </div>
           <div className="overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
@@ -328,10 +261,10 @@ export default function Example() {
                     cleaner, greener future by setting new standards in
                     environmental responsibility worldwide.
                   </p>
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Goal:
+                  </h2>
                   <p className="mt-10">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                      Goal:
-                    </h2>
                     Our goal is to achieve over 95% recovery of valuable metals
                     from spent Li-ion batteries through our patented sustainable
                     processes. We aim to minimize waste, reduce emissions, and
@@ -340,7 +273,7 @@ export default function Example() {
                   </p>
                 </div>
               </div>
-              <div className="lg:flex lg:flex-auto lg:justify-center">
+              <div ref={ref} className="lg:flex lg:flex-auto lg:justify-center">
                 <dl className="w-64 space-y-8 xl:w-80">
                   {stats.map((stat) => (
                     <div
@@ -351,7 +284,16 @@ export default function Example() {
                         {stat.label}
                       </dt>
                       <dd className="text-5xl font-semibold tracking-tight text-white">
-                        {stat.value}
+                        {inView ? (
+                          <CountUp
+                            start={0}
+                            end={stat.value}
+                            duration={3}
+                            suffix={stat.suffix || ""}
+                          />
+                        ) : (
+                          "0" // Initially show 0 until the element comes into view
+                        )}
                       </dd>
                     </div>
                   ))}
@@ -390,87 +332,9 @@ export default function Example() {
             ))}
           </dl>
         </div>
-
         {/* Logo cloud */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-48">
-          <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-            <svg
-              aria-hidden="true"
-              className="h-[40rem] w-[80rem] flex-none stroke-gray-200"
-            >
-              <defs>
-                <pattern
-                  x="50%"
-                  y="50%"
-                  id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                  width={200}
-                  height={200}
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="translate(-100 0)"
-                >
-                  <path d="M.5 200V.5H200" fill="none" />
-                </pattern>
-              </defs>
-              <svg x="50%" y="50%" className="overflow-visible fill-gray-50">
-                <path
-                  d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
-                  strokeWidth={0}
-                />
-              </svg>
-              <rect
-                fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
-                width="100%"
-                height="100%"
-                strokeWidth={0}
-              />
-            </svg>
-          </div>
-          <Company />
-          {/* <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-              ADD Our partners
-            </h2>
-            <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <img
-                alt="Transistor"
-                src="/c1.jpeg"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Reform"
-                src="/c2.png"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Tuple"
-                src="/c3.webp"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="SavvyCal"
-                src="/c4.png"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              />
-              <img
-                alt="Statamic"
-                src="/c5.png"
-                width={158}
-                height={48}
-                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              />
-            </div>
-          </div> */}
-        </div>
 
-        <div className="bg-[#63BF6D] py-24 sm:py-32 mt-[8rem]">
+        <div className="bg-[#63BF6D] py-24 sm:py-32 border-t-4 border-b-4 border-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -523,37 +387,8 @@ export default function Example() {
             </ul>
           </div>
         </div>
-        <BlogList />
+        {/* <BlogList /> */}
       </main>
-
-      {/* Footer */}
-      <footer className="mx-auto mt-40 max-w-7xl overflow-hidden px-6 pb-20  lg:px-8">
-        <nav
-          aria-label="Footer"
-          className="mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
-        >
-          <div className="footer-section flex flex-col items-center space-y-2  md:mb-0 flex-grow md:border-r border-white-600 px-4">
-            <p>info@b2b-recycle.com</p>
-
-            <p>+918527862446</p>
-          </div>
-        </nav>
-        <div className="mt-10 flex justify-center space-x-10">
-          {footerNavigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon aria-hidden="true" className="h-6 w-6" />
-            </a>
-          ))}
-        </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2024 Your Company, Inc. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }

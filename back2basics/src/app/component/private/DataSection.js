@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const DataSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensure the count-up triggers only once
+    threshold: 0.1, // Start counting when 10% of the section is in view
+  });
+
   return (
-    <div className="flex flex-col items-center mt-8 px-4">
+    <div className="flex flex-col items-center mt-8 px-4" ref={ref}>
       {/* Top row of colored icons */}
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <Image
@@ -40,33 +48,45 @@ const DataSection = () => {
       {/* Data Row */}
       <div className="flex flex-wrap justify-around text-center text-black w-[60%]">
         <div className="m-4">
-          <h3 className="text-2xl font-bold">100+</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={100} duration={3} />}+
+          </h3>
           <p className="text-sm">Aggregators Upliftment</p>
         </div>
         <div className="m-4">
-          <h3 className="text-2xl font-bold">7500Mt</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={7500} duration={3} />}Mt
+          </h3>
           <p className="text-sm">Monthly Recycling Capacity</p>
         </div>
         <div className="m-4">
-          <h3 className="text-2xl font-bold">600Mt+</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={600} duration={3} />}Mt+
+          </h3>
           <p className="text-sm">Monthly Battery Sourcing Network</p>
         </div>
         <div className="m-4">
-          <h3 className="text-2xl font-bold">5</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={5} duration={3} />}
+          </h3>
           <p className="text-sm">
             Battery OEM tieups <br />
             (in process)
           </p>
         </div>
         <div className="m-4">
-          <h3 className="text-2xl font-bold">5+</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={5} duration={3} />}+
+          </h3>
           <p className="text-sm">
             Bulk Consumer tieups <br />
             (in process)
           </p>
         </div>
         <div className="m-4">
-          <h3 className="text-2xl font-bold">30+</h3>
+          <h3 className="text-2xl font-bold">
+            {inView && <CountUp start={0} end={30} duration={3} />}+
+          </h3>
           <p className="text-sm">Pan India Collection Centres</p>
         </div>
       </div>

@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div>
       <ServicesSection />
-      <HydroCathode />
+      {/* <HydroCathode /> */}
       <QuoteSection />
-      <HydroToAnode />
+      {/* <HydroToAnode /> */}
     </div>
   );
 }

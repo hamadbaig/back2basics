@@ -27,7 +27,7 @@ const ServicesSection = () => {
   return (
     <>
       <section>
-        <div className="flex justify-center items-center w-[80%] h-[100vh] mt-8 mb-8">
+        <div className="flex  items-center w-[80%] h-[100vh] mt-8 mb-8">
           <h2 className="text-xl font-bold text-white md:text-2xl lg:text-3xl mb-4">
             Watch our Hydro-to-Anode® process in action
           </h2>

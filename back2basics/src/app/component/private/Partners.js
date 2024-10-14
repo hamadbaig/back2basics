@@ -47,7 +47,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner1.jpg"
+              src="https://utfs.io/f/P4auCx0rGutT0r73k28LFXGEKeiuPcNW62qVzTQJM4gDS1an"
               alt="Technology Partner"
               width={150}
               height={150}
@@ -60,7 +60,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner2.jpg"
+              src="https://utfs.io/f/P4auCx0rGutT7DyDDk4DSe3BmYLOrXTQaCtxGz4d8MgIF720"
               alt="Incubating Partner"
               width={120}
               height={120}
@@ -72,7 +72,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner3.jpg"
+              src="https://utfs.io/f/P4auCx0rGutTgJgtgIVu4LqXlhEtCrg7PZjNw1eo03DbHA6M"
               alt="Lab & Testing Partner"
               width={120}
               height={120}
@@ -84,7 +84,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner4.png"
+              src="https://utfs.io/f/P4auCx0rGutTF7gDXRpMUAIsLHvcfoVk1iXOryz4RT3G0ajY"
               alt="PR & Media Partner"
               width={120}
               height={120}
@@ -96,7 +96,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner5.jpg"
+              src="https://utfs.io/f/P4auCx0rGutTaRhrPAOS2dno8qUtCAby9ifGja4OcluZkpXr"
               alt="Start Up India - GOI"
               width={120}
               height={120}
@@ -108,7 +108,7 @@ const Partners = () => {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-between">
             <Image
-              src="/partner6.jpg"
+              src="https://utfs.io/f/P4auCx0rGutTBy5ofnO2MRxcyuD0UsX9PNmTaZ8dHfCgIh4l"
               alt="Start Up India - GOI"
               width={120}
               height={120}
