@@ -1,9 +1,11 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
+// Fix leaflet default icon
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -15,16 +17,16 @@ L.Icon.Default.mergeOptions({
 const MapComponent = () => {
   const [isClient, setIsClient] = useState(false);
 
+  // Ensuring this runs only on the client-side
   useEffect(() => {
-    // This will ensure the code runs only on the client side
     setIsClient(true);
   }, []);
 
   if (!isClient) {
-    return null; // or a loading spinner
+    return null; // or you can return a loader/spinner here
   }
 
-  const position = [28.014147, 77.812451]; // Coordinates
+  const position = [28.014147, 77.812451]; // Coordinates for the marker
 
   return (
     <>
