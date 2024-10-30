@@ -16,32 +16,32 @@ const DataSection = () => {
         <Image
           src="https://utfs.io/f/P4auCx0rGutTnpVZus1tqU802EWsYIRwBrG53cL6JTfhzZSF"
           alt="Icon 7"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
         />
         <Image
           src="https://utfs.io/f/P4auCx0rGutTJLwYuGyevSlapXdQV9kPc80o7fFLw16DAWGq"
           alt="Icon 9"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
         />
         <Image
           src="https://utfs.io/f/P4auCx0rGutTY64IgOnm45rQV91X8yPk3DbZEKHGNMeFjAh7"
           alt="Icon 12"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
         />
         <Image
           src="https://utfs.io/f/P4auCx0rGutTs5tJb9kQfSi0MH17qg9vLmBGzyJRZe83ox4n"
           alt="Icon 13"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
         />
         <Image
           src="https://utfs.io/f/P4auCx0rGutTWruVgUlwBgaVYeH4UqN6ujEsLJMXic2tmxzb"
           alt="Icon 15"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
         />
       </div>
 

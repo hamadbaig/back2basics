@@ -225,7 +225,7 @@ export default function Example() {
         </div>
 
         {/* Content section */}
-        <div className="bg-[#63BF6D] pt-[3rem] pb-[3rem] mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
+        <div className="bg-[#63BF6D] pt-[3rem] pb-[3rem] mx-auto mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:mt-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Our mission
@@ -304,16 +304,16 @@ export default function Example() {
         </div>
 
         {/* Image section */}
-        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+        {/* <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
             alt=""
             src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
             className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
           />
-        </div>
+        </div> */}
 
         {/* Values section */}
-        <div className="bg-[#63BF6D] mx-auto mt-32 pt-[4rem] pb-[4rem] max-w-7xl px-6 sm:mt-40 lg:px-8 ">
+        <div className="bg-[#63BF6D] mx-auto mt-2 pt-[4rem] pb-[4rem] max-w-7xl px-6  lg:px-8 ">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Our values
@@ -334,7 +334,7 @@ export default function Example() {
         </div>
         {/* Logo cloud */}
 
-        <div className="bg-[#63BF6D] py-24 sm:py-32 border-t-4 border-b-4 border-white">
+        <div className="bg-[#63BF6D] py-4 sm:py-8 border-t-4 border-b-4 border-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

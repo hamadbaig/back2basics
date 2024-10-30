@@ -23,18 +23,6 @@ const ImageUpload = ({ onImageUpload }) => {
           alert(`ERROR! ${error.message}`);
         }}
       />
-      {/* {imageUrl.length ? (
-        <div>
-          <Image
-            src={imageUrl}
-            alt="uploaded pic"
-            width={500}
-            height={500}
-            className="w-[300px] h-[300px]"
-          />
-          <p className="mt-[2rem] font-bold text-[2rem]">{imageUrl}</p>
-        </div>
-      ) : null} */}
     </div>
   );
 };
